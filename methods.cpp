@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 
-char letters[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
+char letters[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ' };
 
 int getCharIndex(char letter) // returns the index of the respective letter
 {
@@ -38,7 +38,7 @@ int adjustBounds(int index, int key, bool decrypt = false) // wraps index around
 	}
 }
 
-std::string caesar_encrypt(std::string message, int key = 1, bool negative = false)
+std::string caesar_encrypt(std::string message, int key = 1)
 {
 	for (unsigned int i = 0; i < message.length(); i++)
 	{
@@ -50,7 +50,7 @@ std::string caesar_encrypt(std::string message, int key = 1, bool negative = fal
 	return message;
 }
 
-std::string caesar_decrypt(std::string message, int key = 1, bool negative = false)
+std::string caesar_decrypt(std::string message, int key = 1)
 {
 	for (unsigned int i = 0; i < message.length(); i++)
 	{
